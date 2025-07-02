@@ -100,7 +100,6 @@ NOTE: we will also create the database with sane name that is `customers_report`
 
 - open `customers_report` folders and click one more folder:
     - Folder Name: `customers_csv_reporst`
-   - clic **Create folder**
    - Upload CSV files (e.g., `customers.csv`) into the **input** bucket.
 
 ### step 3:
