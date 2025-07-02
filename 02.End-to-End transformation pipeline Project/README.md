@@ -149,7 +149,7 @@ NOTE: we will also create the database with sane name that is `customers_report`
 - Open **AWS Glue > Data Catalog > Databases**.
   1. create database `customers_report`
   - Note: we are going to provide the location of this particular database in thes3 bucker o simply we are going to copy and paste the URI ot that data store `customers_report` select the `customers_report` and copy the URI and paste in the next step.
-  2. location : s3://
+  2. location : https://my-glue-demo-input.s3.us-east-1.amazonaws.com/data-store/customers_report/
   3. Click **Create database**.
 
 Note : now i crate the database `customers_report` and the next step is to create the table in the database. but here we are going to user crawler to create the table for me
