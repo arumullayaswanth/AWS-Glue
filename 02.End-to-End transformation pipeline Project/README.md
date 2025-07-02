@@ -9,7 +9,17 @@ This guide reproduces the steps from the "Getting started with AWS Glue | Hands�
   - Transforming and writing to Parquet
   - As part of a data pipeline
   - Using Python as the language
+    
+## 🏠 Architecture
 
+<table style="width: 100%; margin-bottom: 20px;">
+  <tr>
+    <td align="center" style="padding: 10px; background-color: #e9f7f5; border-radius: 8px;">
+      <img src="https://github.com/arumullayaswanth/AWS-Glue/blob/b4a32fcdd86d7c696e3c6b45f3ac4f7d37838c7f/02.End-to-End%20transformation%20pipeline%20Project/project%20architecture.png" width="1000%" style="border: 2px solid #ddd; border-radius: 10px;">
+      <br><b>end-to-end transformation pipeline / aws-glue-csv-to-parquet-pipeline</b>
+    </td>
+  </tr>
+</table>
 ### ✅ Topics to Use in Your AWS Glue Project
             - aws
             - aws-glue
