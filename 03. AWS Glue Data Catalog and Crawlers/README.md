@@ -79,11 +79,11 @@ my-awesome-glue-bucket/
 ## 3️⃣ Create a Glue Database
 
 1. Go to AWS Console → Glue → Databases: 
-          - add Database:
-          - database name: `custormers_data`
-          - location: `s3://my-awesome-glue-bucket/data-store/custormers_data/`
-          - description: `My first Glue DB`
-          - create database
+   - add Database:
+   - database name: `custormers_data`
+   - location: `s3://my-awesome-glue-bucket/data-store/custormers_data/`
+   - description: `My first Glue DB`
+   - create database
 2. createing table 
      - go to AWS console → Glue → Crawlers: 
           - add table using crawler:
