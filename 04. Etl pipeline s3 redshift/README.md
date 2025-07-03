@@ -172,17 +172,16 @@ my-awesome-glue-bucket/
 
 5. create ETL job
  - go to AWS console → Glue → Jobs:
- - create job 
-      - click visual ETL
-      - source `Amazon s3`
-             - in left side click on Data source properties - S3
-             - name : `Amazon s3`
-             - s3 source type ` Data catalog table`
-             - Database : `custormers_data`
-             - table name : `test`
-      
-      - targets ` Amazon Redshift` 
-              - in left side click on Data source properties - Amazon Redshift
+ - create job
+ - click visual ETL
+ - source `Amazon s3`
+ - in left side click on Data source properties - S3
+ - name : `Amazon s3`
+ - s3 source type ` Data catalog table`
+ - Database : `custormers_data`
+ - table name : `test`
+      - targets ` Amazon Redshift`
+           - in left side click on Data source properties - Amazon Redshift
              - name : `Amazon Redshift`
              - node parents : `Amazon s3`
              - redshift access type : ` Direct data connection`
