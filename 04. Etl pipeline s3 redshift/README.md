@@ -171,8 +171,8 @@ my-awesome-glue-bucket/
    - confirm
 
 5. create ETL job
-      - go to AWS console → Glue → Jobs: 
-      - create job 
+ - go to AWS console → Glue → Jobs:
+ - create job 
       - click visual ETL
       - source `Amazon s3`
              - in left side click on Data source properties - S3
