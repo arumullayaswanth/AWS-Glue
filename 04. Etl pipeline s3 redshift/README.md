@@ -26,9 +26,9 @@ my-awesome-glue-bucket/
 
 
 1. Go to AWS Console → S3 → Create bucket:
-        - Bucket name: `my-awesome-glue-bucket`
-        - Region: Choose one and use it everywhere (e.g. `us-east-1`)
-        - Create bucket
+  - Bucket name: `my-awesome-glue-bucket`
+  - Region: Choose one and use it everywhere (e.g. `us-east-1`)
+  - Create bucket
 2. open `my-awesome-glue-bucket` bucket
         - create a folder 
         - folder name: `data-store`
