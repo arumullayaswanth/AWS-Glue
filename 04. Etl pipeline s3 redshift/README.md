@@ -30,19 +30,19 @@ my-awesome-glue-bucket/
   - Region: Choose one and use it everywhere (e.g. `us-east-1`)
   - Create bucket
 2. open `my-awesome-glue-bucket` bucket
-        - create a folder 
-        - folder name: `data-store`
-        - create folder
+     - create a folder 
+     - folder name: `data-store`
+      - create folder
 3. open `data-store` folder
-        - create a folder 
-        - folder name: `custormers_data`
-        - create folder
+       - create a folder 
+       - folder name: `custormers_data`
+      - create folder
 4. open `custormers_data` folder
-        - create a folder 
-        - folder name: `csv_report`
-        - create folder
+       - create a folder 
+       - folder name: `csv_report`
+       - create folder
 5. open `csv_report` folder
-        - upload a file 
+       - upload a file 
 **Note:** here successful uploaded the custormers_data.csv file
   
 ## create Amazon Redshift Cluster
