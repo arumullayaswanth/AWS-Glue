@@ -248,8 +248,7 @@ bin/kafka-topics.sh \
 ---
 
 
-### step:8
-  - connect instance in one tap and runthis commands
+
 ## 8.1:  📤 Produce Messages
 ```bash
 bin/kafka-console-producer.sh --broker-list <bootstrapServerString> --producer.config /root/kafka_2.13-3.6.0/bin/client.properties --topic MSKTutorialTopic
@@ -274,7 +273,8 @@ Type messages and press Enter.
 
 
 ---
-
+### step:9
+  - connect instance in one tap and runthis commands
 ## 9. 📥 Consume Messages
 ```bash
 bin/kafka-console-consumer.sh --bootstrap-server <bootstrapServerString> --consumer.config /root/kafka_2.13-3.6.0/bin/client.properties --topic MSKTutorialTopic --from-beginning
