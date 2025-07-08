@@ -227,6 +227,51 @@ head ca.pem
 ```bash
 ssl_cafile="/root/kafka_2.13-3.6.0/bin/ca.pem"
 ```
+### 🔐 What is service.cert?
+1. It is the public certificate for your Kafka client (usually your EC2 instance or application).
+2. It’s used along with a private key (service.key) to prove your identity to the MSK broker.
+
+- 🛠️ Step-by-Step: How to Create service.cert & service.key
+      - You will generate both files using OpenSSL or download them if you've created them through AWS ACM PCA (Private CA).
+
+3. ✅ Option 1: Generate service.cert & service.key Using OpenSSL (Demo/Testing Purpose)
+   - Use this if you're just testing and don't yet have certificates from AWS ACM.
+4. Step 1: Go to Kafka folder
+```bash
+cd /root/kafka_2.13-3.6.0/bin/
+```
+5. Step 2: Generate a private key
+```bash
+openssl genrsa -out service.key 2048
+```
+7. Step 3: Create a certificate signing request (CSR)
+```bash
+openssl req -new -key service.key -out service.csr
+```
+- You'll be prompted to enter information like country, state, common name — you can just press Enter for most.
+
+8. Step 4: Generate a self-signed certificate
+```bash
+openssl x509 -req -in service.csr -signkey service.key -out service.cert -days 365
+```
+- Now you will have:
+   - `service.key` – Private Key
+   - `service.cert` – Client Certificate
+9. Step 5: Verify the files   
+```bash
+ls -l service.*
+```
+- Expected output:
+```bash
+-rw------- 1 root root 1704 Jul 8 13:20 service.key
+-rw-r--r-- 1 root root 1200 Jul 8 13:21 service.cert
+```
+
+10. 🔐 Permissions (Always Recommended)
+```bash
+chmod 400 service.key
+chmod 444 service.cert
+```
 
 ---
 
