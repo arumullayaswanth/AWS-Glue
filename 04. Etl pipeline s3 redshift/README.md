@@ -95,14 +95,14 @@ Go to AWS Console → IAM → Create Role:
 
 
 ## create an S3 Bucket
-
+```s3
 my-awesome-glue-bucket/
 └── data-store/
     └── custormers_data/
         └── csv_report/
             └── custormers_data.csv
 
-
+```
 1. Go to AWS Console → S3 → Create bucket:
   - Bucket name: `my-awesome-glue-bucket`
   - Region: Choose one and use it everywhere (e.g. `us-east-1`)
