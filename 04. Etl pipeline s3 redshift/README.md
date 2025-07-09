@@ -1,5 +1,6 @@
 
 # 🛠️ Step-by-Step: Incremental Data Load from S3 to Redshift
+```makedone
 S3 Bucket 📁
     └── CSV Files (Data)
 
@@ -18,7 +19,7 @@ AWS Glue Job ⚙️
 Amazon Redshift Serverless 🛢️
     └── Stores Data for Analysis (SQL)
 
-
+```
 ## Create an IAM Role
 Go to AWS Console → IAM → Create Role:
 
