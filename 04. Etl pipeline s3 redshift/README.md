@@ -20,6 +20,66 @@ Amazon Redshift Serverless 🛢️
     └── Stores Data for Analysis (SQL)
 
 ```
+
+```tools
+        +-------------------------+
+        |  🧾 CSV File Upload     |
+        |  S3 Bucket              |
+        |  (custormers_data.csv) |
+        +-----------+------------+
+                    |
+                    |  [Trigger: Manual or Scheduled Upload]
+                    v
+        +-------------------------+
+        |  🔍 AWS Glue Crawler    |
+        |  Scans S3 path          |
+        |  Creates Glue Catalog   |
+        +-----------+------------+
+                    |
+                    |  [Logs: CloudWatch → "Crawler Logs"]
+                    v
+        +-------------------------+
+        |  📚 Glue Data Catalog   |
+        |  Table: spectrum_table  |
+        |  DB: custormers_data    |
+        +-----------+------------+
+                    |
+                    |  [Used by Glue Job as Source]
+                    v
+        +-------------------------+
+        |  ⚙️ AWS Glue ETL Job    |
+        |  Source: S3 Catalog     |
+        |  Target: Redshift       |
+        |  Mode: Merge (Incremental) |
+        +-----------+------------+
+                    |
+                    |  [Logs: CloudWatch → "Glue Job Logs"]
+                    v
+        +-------------------------+
+        |  🔌 Glue Connection     |
+        |  (To Redshift DB)       |
+        +-----------+------------+
+                    |
+                    |  [Uses Redshift IAM Role + Test]
+                    v
+        +-------------------------+
+        |  🛢️ Amazon Redshift     |
+        |  Serverless Workgroup   |
+        |  Namespace: redshiftdb  |
+        |  Schema: public         |
+        |  Table: customer_data   |
+        +-----------+------------+
+                    |
+                    |  [Logs: Query Editor, Spectrum Query Logs]
+                    v
+        +-------------------------+
+        |  📈 Query + Analysis    |
+        |  SELECT * FROM ...      |
+        |  Dashboard/BI Tools     |
+        +-------------------------+
+
+
+```
 ## Create an IAM Role
 Go to AWS Console → IAM → Create Role:
 
