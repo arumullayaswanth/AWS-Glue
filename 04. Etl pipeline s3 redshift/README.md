@@ -1,5 +1,22 @@
 
 # 🛠️ Step-by-Step: Incremental Data Load from S3 to Redshift
+S3 Bucket 📁
+    └── CSV Files (Data)
+
+      ⬇️
+
+AWS Glue Crawler 🔍
+    └── Scans S3 and Creates Table
+
+      ⬇️
+
+AWS Glue Job ⚙️
+    └── Extracts Data from S3 and Loads to Redshift
+
+      ⬇️
+
+Amazon Redshift Serverless 🛢️
+    └── Stores Data for Analysis (SQL)
 
 
 ## Create an IAM Role
