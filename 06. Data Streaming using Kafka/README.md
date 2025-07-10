@@ -25,7 +25,8 @@ We’re making a cool system that:
 ### 🛠️ 1.2 Install Kafka
 ```bash
 sudo yum update -y
-wget https://downloads.apache.org/kafka/3.6.0/kafka_2.13-3.6.0.tgz
+wget https://archive.apache.org/dist/kafka/3.6.0/kafka_2.13-3.6.0.tgz
+
 tar -xzf kafka_2.13-3.6.0.tgz
 cd kafka_2.13-3.6.0
 ```
@@ -39,6 +40,7 @@ sudo -i
 sudo yum -y install java-11
 # /3.6.0/ you need to replace with your kafka version of yout MSK
 wget https://archive.apache.org/dist/kafka/3.6.0/kafka_2.13-3.6.0.tgz
+
 tar -xzf kafka_2.13-3.6.0.tgz
 cd kafka_2.13-3.6.0
 ```
